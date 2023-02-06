@@ -48,8 +48,7 @@ parser.on("data", function (data) {
         // PID 10 = LIP, discard SDS with other PIDs
         report = lip.decodeMessage(data);
 
-        console.log("\n");
-        console.log(`Lat: ${report.latitude}`);
+        console.log(`\nLat: ${report.latitude}`);
         console.log(`Lon: ${report.longitude}`);
         console.log(`Speed: ${report.speed}`);
         console.log(`Direction: ${report.direction} degrees`);
@@ -63,8 +62,9 @@ parser.on("data", function (data) {
   if (data.substr(0, 8) === "+CTSDSR:") {
     dataCommand = data.substr(9).split(",");
     console.log("\n---------------------------------")
-    console.log("Message from: " + dataCommand[1]);
-    console.log("Message to: " + dataCommand[3]);
+    console.log(`Message from: ${dataCommand[1]}`);
+    console.log(`Message to: ${dataCommand[3]}`);
+    console.log(`Time:  ${new Date()}`);
 
     lastMessageFrom = dataCommand[1];
     recvdCommand = "sds";
