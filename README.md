@@ -1,4 +1,4 @@
-Short demo program to show how location reports in short LIP format from Tetra radios can be received av decoded.
+Short demo program to show how location reports in short LIP format from Tetra radios can be received and decoded.
 
 The program is only tested on Motorola terminals. In theory receiving location reports from any manufacturer should 
 work, but the the AT commands to get the SDS delivered to the PEI port and the format of the SDS data on the on the 
@@ -7,9 +7,9 @@ receiving terminal would probably have to be slightly modified.
 The program only accounts for the short LIP format.
 
 References:
-Motorola AT Programmers guide  (not publicly avaliable)
-Sepura MOD-13-1615             (not publicly avaliable)
-ETSI document TS 100 392-18-1  https://www.etsi.org/deliver/etsi_ts/100300_100399/1003921801/01.03.01_60/ts_1003921801v010301p.pdf
+- Motorola AT Programmers guide  (not publicly avaliable)
+- Sepura MOD-13-1615             (not publicly avaliable)
+- ETSI document TS 100 392-18-1  https://www.etsi.org/deliver/etsi_ts/100300_100399/1003921801/01.03.01_60/ts_1003921801v010301p.pdf
 
 The program should work under all OSes supported by Node Serialport but has only been tested on MacOS. 
 Node.js mst be installed, and Node Serial package can sometimes be a bit problematic to compile. 
@@ -29,8 +29,6 @@ To only decode a single SDS with short LIP PDU you can use "node deocde.js <mess
     Reason: Interval
 
 To connect to PEI interface on the terminal and decode received LIP reports use serial.js like this:
-
-node serial.js <port> <baudrate>  e.g. node serial.js /dev/tty.usbserial-FTDN0YWQ 38400
 
     node serial.js /dev/tty.usbserial-FTDN0YWQ 38400
     Radio initilized
