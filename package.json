@@ -1,0 +1,14 @@
+{
+  "name": "locationdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon-Harald Bråthen",
+  "license": "ISC",
+  "dependencies": {
+    "serialport": "^10.5.0"
+  }
+}
